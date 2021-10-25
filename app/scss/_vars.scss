@@ -1,0 +1,69 @@
+// Get colors
+$nav-text-color: rgba(54, 56, 56, 0.9033);
+$title-text-color: hsla(180, 2%, 22%, 1);
+$title-line-color: hsla(213, 5%, 45%, 1); 
+$content-text-color: hsla(0, 0%, 35%, 1);
+$main-background-color: #F2F2F2;
+$filter-btn-border: hsla(212, 2%, 27%, 1);
+$filter-btn-text-color: hsla(0, 1%, 56%, 1);
+$filter-btn-back-active: hsla(55, 100%, 60%, 1);
+$background-footer-color: hsla(0, 0%, 88%, 1);
+$footer-links-color: hsla(0, 0%, 44%, 1);
+$footer-form-placeholder: hsla(0, 0%, 63%, 1);
+$footer-form-border-color: hsla(0, 2%, 22%, 1);
+$footer-form-text-color: hsla(60, 100%, 97%, 1);
+
+
+
+// title fonts 'for using: @extend %title-font;
+%title-font {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: clamp(16px, 2.5vw, 20px);
+  line-height: 24px;
+  color: $title-text-color;
+}
+
+// button for filter section
+%filter-btn {
+  border: 1px solid $filter-btn-border;
+  background-color: transparent;
+  border-radius: 20px;
+  color: $filter-btn-text-color;
+  padding: 6px 15px;
+}
+// styles for button when it will be active
+%filter-btn-active {
+  width: 367px;
+  max-width: 100%;
+  border: 1px solid transparent;
+  background-color: $filter-btn-back-active;
+  font-size: clamp(12px, 2.5vw, 16px);
+  line-height: 28px;
+  ::placeholder {
+    color: $footer-form-placeholder;
+  }
+}
+
+// form button style
+%form-btn {
+  font-family: 'Open Sans';
+  font-weight: 600;
+  font-size: clamp(12px, 2.5vw, 16px);
+  line-height: 28px;
+  text-align: center;
+  color: $footer-form-text-color;
+  border: 1px solid $title-text-color;
+  background-color: $title-text-color;
+  border-radius: 21px;
+  padding: 6px 12px;
+}
+
+// form input
+%form-input {
+  border: 1px solid $footer-form-border-color;
+  background-color: transparent;
+  border-radius: 21px;
+  padding: 6px 18px;
+  color: $footer-form-placeholder;
+}

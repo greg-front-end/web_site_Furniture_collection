@@ -1,0 +1,46 @@
+.header {
+
+  // .header__inner
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 120px;
+  }
+
+  // .header__btn
+
+  &__btn {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+}
+.container {
+}
+.menu {
+  padding-right: 15px;
+  // .menu__list
+
+  &__list {
+    display: flex;
+  }
+
+  // .menu__list-item
+
+  &__list-item {
+    padding-right: 45px;
+    padding-left: 35px;
+  }
+
+  // .menu__list-link
+
+  &__list-link {
+    @extend %title-font;
+  }
+}
+.logo {
+  margin: 0 auto;
+}
