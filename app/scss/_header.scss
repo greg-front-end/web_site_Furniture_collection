@@ -6,7 +6,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 120px;
+    height: 60px;
+    transition: $transition_main;
+
+    @media screen and (min-width: 768px) {
+      margin: 0 auto;
+      height: 120px;
+    }
   }
 
   // .header__btn
@@ -21,7 +27,13 @@
 .container {
 }
 .menu {
-  padding-right: 15px;
+  row-gap: 15px;
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+
   // .menu__list
 
   &__list {
@@ -31,8 +43,8 @@
   // .menu__list-item
 
   &__list-item {
-    padding-right: 45px;
-    padding-left: 35px;
+    padding-right: calc(45px - 10px);
+    padding-left: calc(35px - 10px);
   }
 
   // .menu__list-link
@@ -42,5 +54,10 @@
   }
 }
 .logo {
-  margin: 0 auto;
+  @extend %logo_size;
+  flex-shrink: 0;
+
+  @media screen and (min-width: 768px) {
+    margin: 0 auto;
+  }
 }

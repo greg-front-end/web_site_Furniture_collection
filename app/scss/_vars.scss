@@ -1,4 +1,4 @@
-// Get colors
+// ================= VAR OF COLORS ================= //
 $nav-text-color: rgba(54, 56, 56, 0.9033);
 $title-text-color: hsla(180, 2%, 22%, 1);
 $title-line-color: hsla(213, 5%, 45%, 1); 
@@ -12,17 +12,61 @@ $footer-links-color: hsla(0, 0%, 44%, 1);
 $footer-form-placeholder: hsla(0, 0%, 63%, 1);
 $footer-form-border-color: hsla(0, 2%, 22%, 1);
 $footer-form-text-color: hsla(60, 100%, 97%, 1);
+$footer-form-copy-color: hsla(0, 0%, 63%, 1);
 
+// ================= HOVER OVERLAY ================= //
+$transition_main: .3s;
+$hidden: hidden;
+$scale: scale(1.1);
 
+// ================= RESPONSIVE IMG SIZE ================= //
+%logo_size {
+  max-width: 100%;
+}
+
+// ================= RESPONSIVE TEXT SIZE ================= //
+%body-text_size {
+  font-size: clamp(14px, 2.5vw, 16px);
+  line-height: 27px;
+}
+
+%responsive-text_size-intro_title {
+  font-size: clamp(24px, 2.5vw, 110px);
+  line-height: 51px;
+}
+
+%responsive-text_size-main_title {
+  font-size: clamp(18px, 2.5vw, 36px);
+  line-height: 51px;
+}
+
+%responsive-text_size-article_title {
+  font-size: clamp(14px, 2.5vw, 24px);
+  line-height: 38px;
+}
+
+%responsive-text_size-form_title {
+  font-size: clamp(12px, 2.5vw, 16px);
+  line-height: 23px;
+}
+
+%responsive-text_size-sub_title {
+  font-size: clamp(12px, 2.5vw, 18px);
+}
+
+// ================= FOTNS ================= //
+
+$body-font: 'Montserrat', sans-serif;
+$title-font: 'Open Sans', sans-serif;
 
 // title fonts 'for using: @extend %title-font;
 %title-font {
-  font-family: 'Montserrat', sans-serif;
+  font-family: $body-font;
   font-weight: 700;
-  font-size: clamp(16px, 2.5vw, 20px);
-  line-height: 24px;
   color: $title-text-color;
 }
+
+// ================= BUTTONS ================= //
 
 // button for filter section
 %filter-btn {
@@ -58,6 +102,8 @@ $footer-form-text-color: hsla(60, 100%, 97%, 1);
   border-radius: 21px;
   padding: 6px 12px;
 }
+
+// ================= INPUTS ================= //
 
 // form input
 %form-input {

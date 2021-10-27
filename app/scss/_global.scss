@@ -4,10 +4,10 @@ body {
 }
 
 body {
-	font-family: 'Open Sans', sans-serif;
-	font-size: 16px;
-	line-height: 27px;
+	font-family: $body-font;
+	@extend %body-text_size;
 	font-weight: 400;
+	color: $content-text-color;
 }
 
 .wrapper {
