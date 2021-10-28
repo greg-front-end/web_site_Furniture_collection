@@ -10,46 +10,89 @@
   // .footer__inner
 
   &__inner {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 30px;
+    @media  screen and (min-width: 768px) {
+      justify-content: space-between;
+      flex-direction: row;
+      column-gap: 15px;
+    }
   }
 
   // .footer__info
 
   &__info {
+    flex-basis: fill;
+    @media screen and (min-width: 768px) {
+      max-width: 50%;
+      width: 536px;
+      flex-shrink: 1;
+    }
   }
 
   // .footer__info-title
 
   &__info-title {
+    @extend %title-font-mons-700;
+    @extend %responsive-text_size-form_title;
+    padding-bottom: 30px;
   }
 
   // .footer__info-text
 
   &__info-text {
+    padding-bottom: 30px;
   }
 
   // .footer__info-email
 
   &__info-email {
+    display: inline-block;
+    padding-bottom: 30px;
+    @extend %footer-font-open-600;
+    color: $title-text-color;
+    img {
+      display: inline-block;
+      padding-right: 12px;
+    }
   }
 
   // .footer__form
 
   &__form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 20px;
+    @media screen and (min-width: 768px){
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: space-between;
+    }
   }
 
   // .footer__form-input
 
   &__form-input {
+    @extend %form-input;
   }
 
   // .footer__form-btn
 
   &__form-btn {
+    @extend %form-btn;
+    @extend %footer-font-open-600;
   }
 
   // .footer__social
 
   &__social {
+    max-width:288px;
+    li:not(:last-child) {
+      padding-bottom: 26px;
+    }
   }
 
   // .footer__soctial-item
@@ -60,11 +103,19 @@
   // .footer__social-link
 
   &__social-link {
+    img {
+      display: inline-block;
+      padding-right: 12px;
+    }
   }
 
   // .footer__menu
 
   &__menu {
+    max-width:288px;
+    li:not(:last-child) {
+      padding-bottom: 26px;
+    }
   }
 
   // .footer__menu-list
@@ -73,13 +124,15 @@
   }
 
   // .footer__menu-item
-
+  
   &__menu-item {
   }
 
   // .footer__menu-link
-
+  &__social-link,
   &__menu-link {
+    color: $footer-links-color;
+    @extend %footer-font-open-600;
   }
 
   // .footer__copyright
@@ -91,5 +144,4 @@
     padding: 42px 0;
   }
 }
-.container {
-}
+

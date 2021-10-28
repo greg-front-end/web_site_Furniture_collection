@@ -26,27 +26,27 @@ $scale: scale(1.1);
 
 // ================= RESPONSIVE TEXT SIZE ================= //
 %body-text_size {
-  font-size: clamp(14px, 2.5vw, 16px);
-  line-height: 27px;
+  font-size: clamp(16px, calc(16 / 1140 * 100vw), 18px);
+  line-height: 27px;  
 }
 
 %responsive-text_size-intro_title {
-  font-size: clamp(24px, 2.5vw, 110px);
+  font-size: clamp(36px, calc(110 / 1140 * 100vw), 120px);
   line-height: 51px;
 }
 
 %responsive-text_size-main_title {
-  font-size: clamp(18px, 2.5vw, 36px);
+  font-size: clamp(26px, calc(36 / 1140 * 100vw), 40px);
   line-height: 51px;
 }
 
-%responsive-text_size-article_title {
-  font-size: clamp(14px, 2.5vw, 24px);
+%responsive-text_size-blog_title {
+  font-size: clamp(20px, calc(24 / 1140 * 100vw), 28px);
   line-height: 38px;
 }
 
 %responsive-text_size-form_title {
-  font-size: clamp(12px, 2.5vw, 16px);
+  font-size: clamp(16px, calc(16 / 1140 * 100vw), 20px);
   line-height: 23px;
 }
 
@@ -56,14 +56,19 @@ $scale: scale(1.1);
 
 // ================= FOTNS ================= //
 
-$body-font: 'Montserrat', sans-serif;
-$title-font: 'Open Sans', sans-serif;
+$title-font: 'Montserrat', sans-serif;
+$body-font: 'Open Sans', sans-serif;
 
 // title fonts 'for using: @extend %title-font;
-%title-font {
-  font-family: $body-font;
+%title-font-mons-700 {
+  font-family: $title-font;
   font-weight: 700;
   color: $title-text-color;
+}
+
+%footer-font-open-600 {
+  font-family: $body-font;
+  font-weight: 600;
 }
 
 // ================= BUTTONS ================= //
@@ -101,6 +106,13 @@ $title-font: 'Open Sans', sans-serif;
   background-color: $title-text-color;
   border-radius: 21px;
   padding: 6px 12px;
+  width: 100%;
+  @media screen and (min-width: 768px){
+    width: 160px;
+  }
+  @media (min-width: 481px) and (max-width: 768px){
+    width: 70%;
+  }
 }
 
 // ================= INPUTS ================= //
@@ -112,4 +124,12 @@ $title-font: 'Open Sans', sans-serif;
   border-radius: 21px;
   padding: 6px 18px;
   color: $footer-form-placeholder;
+  width: 100%;
+  @media screen and (min-width: 768px){
+    width: 80%;
+    margin-right: 10px;
+  }
+  @media (min-width: 481px) and (max-width: 768px){
+    width: 70%;
+  }
 }

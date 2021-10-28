@@ -29,6 +29,19 @@ body {
   padding: 0 15px;
 }
 
+.title {
+	font-family: $title-font;
+	@extend %responsive-text_size-main_title;
+	color: $title-text-color;
+	text-align: center;
+}
+
+.title-blog {
+	font-family: $title-font;
+	@extend %responsive-text_size-blog_title;
+	color: $title-text-color;
+}
+
 
 
 
