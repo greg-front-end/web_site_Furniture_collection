@@ -1,7 +1,8 @@
 // ================= VAR OF COLORS ================= //
 $nav-text-color: rgba(54, 56, 56, 0.9033);
 $title-text-color: hsla(180, 2%, 22%, 1);
-$title-line-color: hsla(213, 5%, 45%, 1); 
+$title-line-color: hsla(213, 5%, 45%, 1);
+$title-intro_line-color: hsla(0, 0%, 59%, 1);
 $content-text-color: hsla(0, 0%, 35%, 1);
 $main-background-color: #F2F2F2;
 $filter-btn-border: hsla(212, 2%, 27%, 1);
@@ -12,7 +13,34 @@ $footer-links-color: hsla(0, 0%, 44%, 1);
 $footer-form-placeholder: hsla(0, 0%, 63%, 1);
 $footer-form-border-color: hsla(0, 2%, 22%, 1);
 $footer-form-text-color: hsla(60, 100%, 97%, 1);
-$footer-form-copy-color: hsla(0, 0%, 63%, 1);
+
+// ================= MIXINS FOR ADAPTIVE SIZE ================= //
+$maxwidth: 1920;
+$maxWidthContainer: 1140;
+
+@mixin adaptiv-value($property, $startsize, $minsize, $type) {
+  $addsize: $startsize - $minsize;
+  @if $type==1 {
+    // If less container
+    #{$property} : $startsize + px;
+    @media (max-width: #{$maxWidthcontainer + px}) {
+    #{$property}: calc(#{$minsize + px} + #{$addsize} * ((100vw - 320px) / #{$maxWidthContainer - 320})) ;
+    }
+  } @else if $type==2 {
+    // If more then container
+    #{$property}: $startsize + px;
+    @media (min-width: #{$maxWidthContainer + px}) {
+      #{$property}: calc(#{$minSize + px} + #{$addsize} * ((100vw - 320px) / #{$maxWidth - 320}));
+    }
+  } @else {
+    // Always
+    #{$property}: calc(#{$minsize + px} + #{$addsize} * ((100vw - 320px) / #{$maxWidth - 320})) ;
+  }
+}
+
+@mixin adp-size ($property, $minSize, $width, $maxSize) {
+  #{$property}: clamp(#{$minSize + px}, calc(#{$maxSize} / #{$width} * 100vw), #{$maxSize + px}); 
+}
 
 // ================= HOVER OVERLAY ================= //
 $transition_main: .3s;
@@ -59,7 +87,7 @@ $scale: scale(1.1);
 $title-font: 'Montserrat', sans-serif;
 $body-font: 'Open Sans', sans-serif;
 
-// title fonts 'for using: @extend %title-font;
+// title fonts 'for using: @extend %title-font';
 %title-font-mons-700 {
   font-family: $title-font;
   font-weight: 700;

@@ -1,3 +1,4 @@
+// ================= HEADER ================= //
 .header {
 
   // .header__inner
@@ -25,8 +26,7 @@
     cursor: pointer;
   }
 }
-.container {
-}
+
 .menu {
   row-gap: 15px;
   display: none;
@@ -53,7 +53,14 @@
   &__list-link {
     @extend %title-font-mons-700;
   }
+
+  // .header__rightside-menu
+
+  &__rightside-menu {
+  }
 }
+
+// ================= LOGO ================= //
 .logo {
   @extend %logo_size;
   flex-shrink: 0;
@@ -62,3 +69,90 @@
     margin: 0 auto;
   }
 }
+
+// ================= RIGHTSIDE MENU ================= //
+.rightside-menu {
+  padding: clamp(15px, calc(50 / 1140 * 100vw), 50px);
+  position: fixed;
+  display: block;
+  right: 0;
+  top: 0;
+  overflow-y: scroll;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  width: clamp(320px, calc(694 / 1140 * 100vw), 694px);
+  background-color: #fff;
+  box-shadow: -6px 0 18px 1px $footer-form-placeholder;
+  z-index: 100;
+  transition: $transition_main;
+
+  &.rightside-menu--close {
+    transform: translateX(200%);
+  }
+  // .rightside-menu__close
+
+  &__close {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    margin-bottom: 60px;
+  }
+
+  // .rightside-menu__close-img
+
+  &__close-img {
+  }
+
+  // .rightside-menu__content
+
+  &__content {
+    width: 100%;
+    text-align: center;
+    max-width: 485px;
+    margin: 0 auto;
+  }
+
+  // .rightside-menu__logo
+
+  &__logo {
+    margin: 0 auto;
+    @include adp-size("margin-bottom", 20, 1140, 60);
+    @include adp-size("width", 130, 1140, 194);
+  }
+
+  // .rightside-menu__title
+
+  &__title {
+    @include adp-size("margin-bottom", 30, 1140, 50);
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      display: block;
+      left: 0;
+      right: 0;
+      // bottom: -20px;
+      @include adp-size("top", 60, 1140, 80);
+      // max-width: 252px;
+      @include adp-size("max-width", 150, 1140, 252);
+      height: 1px;
+      background-color: $title-line-color;
+      margin: 0 auto;
+    }
+  }
+
+  // .rightside-menu__text
+
+  &__text {
+    @include adp-size("margin-bottom", 20, 1140, 75);
+  }
+
+  // .rightside-menu__img
+
+  &__img {
+    max-width: 485px;
+  }
+}
+

@@ -8,6 +8,8 @@ body {
 	@extend %body-text_size;
 	font-weight: 400;
 	color: $content-text-color;
+	overflow-x: hidden;
+	min-width: 320px;
 }
 
 .wrapper {
@@ -30,9 +32,8 @@ body {
 }
 
 .title {
-	font-family: $title-font;
+	@extend %title-font-mons-700;
 	@extend %responsive-text_size-main_title;
-	color: $title-text-color;
 	text-align: center;
 }
 
@@ -42,6 +43,28 @@ body {
 	color: $title-text-color;
 }
 
+.slick-dots {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	li {
+		padding: 0 15px;
+	}
+	button {
+		background-color: $title-text-color;
+		border: none;
+		width: 8px;
+		height: 8px;
+		border-radius: 50%;
+		padding: 0;
+		font-size: 0;
+	}
+	li.slick-active {
+		button {
+			background-color: $filter-btn-back-active;
+		}
+	}
+}
 
 
 
