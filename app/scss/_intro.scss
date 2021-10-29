@@ -4,7 +4,11 @@
 		// .intro__inner
 
 		&__inner {
-      padding-bottom: 70px;
+         padding-top: 20px;
+         @include adp-size("padding-bottom", 20, 1140, 70);
+         @media screen and (min-width: 768px) {
+         padding-top: 0;
+      }
       position: relative;
       &::after {
         content: '';
@@ -52,32 +56,21 @@
 		// .intro__slider-title
 
 		&__slider-title {
-      @include adp-size("font-size", 30, 1140, 110);
-      @include adp-size("line-height", 51, 1140, 135);
-      padding-bottom: 26px;
-      margin-bottom: 26px;
-      position: relative;
-      @media screen and (min-width: 768px) {
-        text-align: left;
-      }
-      &::after {
-        content: "";
-        position: absolute;
-        display: block;
-        margin: 0 auto;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        @include adp-size("width", 140, 1140, 200);
-        height: 1px;
-        background-color: $title-intro_line-color;
-      }
+         @include adp-size("font-size", 30, 1140, 110);
+         @include adp-size("line-height", 51, 1140, 135);
+         padding-bottom: 26px;
+         margin-bottom: 26px;
+         position: relative;
+         @media screen and (min-width: 768px) {
+         text-align: left;
+         }
+         @extend %left-line;
 		}
 
 		// .intro__slider-text
 
 		&__slider-text {
-      max-width: 580px;
+         max-width: 580px;
 		}
 }
 

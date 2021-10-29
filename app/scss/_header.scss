@@ -83,7 +83,7 @@
   height: 100%;
   width: clamp(320px, calc(694 / 1140 * 100vw), 694px);
   background-color: #fff;
-  box-shadow: -6px 0 18px 1px $footer-form-placeholder;
+  box-shadow: -1px 0 12px 0px $footer-form-placeholder;
   z-index: 100;
   transition: $transition_main;
 

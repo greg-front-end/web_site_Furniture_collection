@@ -30,17 +30,24 @@ body {
   margin: 0 auto;
   padding: 0 15px;
 }
+.container-fluid {
+	max-width: 1920px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
 
 .title {
 	@extend %title-font-mons-700;
 	@extend %responsive-text_size-main_title;
 	text-align: center;
+	position: relative;
 }
 
 .title-blog {
 	font-family: $title-font;
 	@extend %responsive-text_size-blog_title;
 	color: $title-text-color;
+	position: relative;
 }
 
 .slick-dots {
