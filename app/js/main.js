@@ -27,4 +27,8 @@ $(function () {
     fade: true,
     autoplay: true
   });
+
+   // ================ FILTER FOR GALLERY ================ //
+   var mixer = mixitup('.gallery__items');
+
 });

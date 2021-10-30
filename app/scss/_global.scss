@@ -53,7 +53,7 @@ body {
 button.gallery__filter-btn {
 	@extend %filter-btn;
 }
-button.gallery__filter-btn.active {
+button.gallery__filter-btn.mixitup-control-active{
 	@extend %filter-btn-active;
 }
 

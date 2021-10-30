@@ -135,6 +135,8 @@ $body-font: 'Open Sans', sans-serif;
 
 // button for filter section
 %filter-btn {
+  font-family: $body-font;
+  font-weight: 600;
   border: 1px solid $filter-btn-border;
   background-color: transparent;
   border-radius: 20px;
@@ -148,9 +150,7 @@ $body-font: 'Open Sans', sans-serif;
   background-color: $filter-btn-back-active;
   @include adp-size('font-size', 12, 1140, 16);
   line-height: 28px;
-  ::placeholder {
-    color: $footer-form-placeholder;
-  }
+  color: $title-text-color;
 }
 
 // form button style
