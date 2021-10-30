@@ -50,6 +50,13 @@ body {
 	position: relative;
 }
 
+button.gallery__filter-btn {
+	@extend %filter-btn;
+}
+button.gallery__filter-btn.active {
+	@extend %filter-btn-active;
+}
+
 .slick-dots {
 	display: flex;
 	justify-content: center;
