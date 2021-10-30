@@ -1,0 +1,35 @@
+.decor {
+  @include adp-size("padding-top", 50, 1140, 190);
+  @include adp-size("padding-bottom", 50, 1140, 160);
+  background-image: url('../images/decor_bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  @media screen and (min-width: 1200px){
+    min-height: 600px;
+  }
+  // .decor__title
+
+  &__title {
+    @include adp-size("font-size", 30, 1140, 70);
+    @include adp-size("line-height", 51, 1140, 95);
+    text-align: left;
+    max-width: 600px; 
+    padding-bottom: 22px;
+    margin-bottom: 22px;
+    @extend %left-line;
+    span {
+      display: block;
+    }
+  }
+
+  // .decor__text
+
+  &__text {
+    max-width: 600px;
+  }
+}
+.container {
+}
+.title {
+}

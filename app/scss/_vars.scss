@@ -140,14 +140,13 @@ $body-font: 'Open Sans', sans-serif;
   border-radius: 20px;
   color: $filter-btn-text-color;
   padding: 6px 15px;
+  cursor: pointer;
 }
 // styles for button when it will be active
 %filter-btn-active {
-  width: 367px;
-  max-width: 100%;
   border: 1px solid transparent;
   background-color: $filter-btn-back-active;
-  font-size: clamp(12px, 2.5vw, 16px);
+  @include adp-size('font-size', 12, 1140, 16);
   line-height: 28px;
   ::placeholder {
     color: $footer-form-placeholder;
@@ -158,7 +157,7 @@ $body-font: 'Open Sans', sans-serif;
 %form-btn {
   font-family: 'Open Sans';
   font-weight: 600;
-  font-size: clamp(12px, 2.5vw, 16px);
+  @include adp-size('font-size', 16, 1140, 18);
   line-height: 28px;
   text-align: center;
   color: $footer-form-text-color;
@@ -167,6 +166,7 @@ $body-font: 'Open Sans', sans-serif;
   border-radius: 21px;
   padding: 6px 12px;
   width: 100%;
+  cursor: pointer;
   @media screen and (min-width: 768px){
     width: 160px;
   }
