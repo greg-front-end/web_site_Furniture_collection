@@ -20,8 +20,11 @@
 
 .collection {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  column-gap: 20px;
+  align-items: center;
+  place-items: center;
+  grid-template-columns: repeat(auto-fit,minmax(200px, 1fr));
+  gap: 20px;
+  
   // .collection__item
 
   &__item {
