@@ -1,7 +1,7 @@
 .new-collection {
   text-align: center;
   @include adp-size("padding-top", 20, 1140, 65);
-  @include adp-size("padding-bottom", 40, 1140, 105);
+  @include adp-size("padding-bottom", 40, 1140, 45);
   // .new-collection__title
 
   &__title {
