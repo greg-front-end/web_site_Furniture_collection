@@ -57,6 +57,19 @@
       grid-row: 1;
     }
   }
+
+  &.gallery-page {
+    @include adp-size("padding-top", 30, 1140, 90);
+    @include adp-size("padding-bottom", 30, 1140, 90);
+    .gallery__item:nth-child(8) {
+      grid-column: span 2;
+      grid-row: span 2;
+      @media screen and (max-width: 1024px){
+        grid-column: 1;
+        grid-row: 1;
+      } 
+    }
+  }
   &__item img {
     object-fit: cover;
     width: 100%;
@@ -94,22 +107,4 @@
 
   &__item-img--5 {
   }
-}
-.container-fluid {
-}
-.active {
-}
-.mix {
-}
-.bedroom {
-}
-.chair {
-}
-.all {
-}
-.living {
-}
-.dining {
-}
-.office {
 }
