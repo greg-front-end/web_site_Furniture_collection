@@ -1,0 +1,95 @@
+// ================= SKILLS ================= //
+
+.skills {
+
+  @include adp-size("padding-top", 30, 1140, 100);
+  @include adp-size("padding-bottom", 30, 1140, 100);
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 90px;
+    background-image: url('../images/about/skills-bg.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    @include adp-size("height", 200, 1140, 444);
+    z-index: -1;
+  }
+
+  // .skills__inner
+
+  &__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  // .skills__img
+
+  &__img {
+    position: absolute;
+    left: 8%;
+  }
+
+  // .skills__content
+
+  &__content {
+    max-width: 822px;
+  }
+
+  // .skills__title
+
+  &__title {
+    text-align: left;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    @extend %left-line;
+  }
+
+  // .skills__text
+
+  &__text {
+    margin-bottom: 30px;
+  }
+
+  // .skills__list
+
+  &__list {
+  }
+
+  // .skills__item
+
+  &__item {
+    margin-bottom: 30px;
+    color: $title-text-color;
+    font-family: $title-font;
+  }
+
+  // .skills__item-content
+
+  &__item-content {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 14px;
+    border-bottom: 2px solid #fff;
+    border-radius: 4px;
+  }
+
+  // .skills__num
+
+  &__num {
+  }
+
+  // .skills__line
+
+  &__line {
+    height: 2px;
+    border-radius: 4px;
+    background-color: $title-text-color;
+    margin-top: -2px;
+  }
+}

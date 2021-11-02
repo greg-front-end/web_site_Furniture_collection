@@ -1,0 +1,29 @@
+// ================= BREADCRUMBS ================= //
+.breadcrumbs {
+
+  background-color: $background-footer-color;
+  padding: 13px;
+
+  // .breadcrumbs__list
+
+  &__list {
+    display: flex;
+  }
+
+  // .breadcrumbs__item
+
+  &__item::after {
+    content: '/';
+  }
+  &__item:last-child::after {
+    display: none;
+  }
+
+  // .breadcrumbs__link
+
+  &__link {
+    color: $content-text-color;
+    font-size: 14px;
+  }
+}
+

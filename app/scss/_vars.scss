@@ -193,3 +193,11 @@ $body-font: 'Open Sans', sans-serif;
     width: 70%;
   }
 }
+
+// ================= FANY BOX ================= //
+@function max($numbers ...) {
+  @return m#{a}x(#{$numbers});
+}
+@function min($numbers ...) {
+  @return m#{i}n(#{$numbers});
+}

@@ -1,0 +1,65 @@
+// ================= ABOUT ================= //
+.about {
+
+
+  // .about__prev
+
+  &__prev {
+    background-image: url('../images/about/about-prev-bg.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    padding: 160px 0;
+    width: 100%;
+    margin-top: -54px;
+  }
+
+  // .about__prev-title
+
+  &__prev-title {
+    @include adp-size("font-size", 40, 1140, 70);
+    line-height: 180px;
+  }
+
+  // .about__content
+
+  &__content {
+    @include adp-size("padding-top", 30, 1140, 130);
+    @include adp-size("padding-bottom", 20, 1140, 40);
+  }
+
+  // .about__title
+
+  &__title {
+    text-align: left;
+    @extend %left-line;
+    margin-bottom: 23px;
+    padding-bottom: 23px;
+    max-width: 822px;
+  }
+
+  // .about__text
+
+  &__text {
+    p {
+      margin-bottom: 30px;
+    }
+  }
+
+  // .about__popup
+
+  &__popup {
+    background-image : url('../images/about/popup-bg.jpg');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    @include adp-size("height", 200, 1140, 414);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
