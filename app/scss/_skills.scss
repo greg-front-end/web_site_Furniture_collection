@@ -11,12 +11,12 @@
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 90px;
+    @include adp-size("bottom", 10, 1140, 90);
     background-image: url('../images/about/skills-bg.jpg');
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
-    @include adp-size("height", 200, 1140, 444);
+    height: 440px;
     z-index: -1;
   }
 
@@ -26,13 +26,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    object-fit: cover;
   }
 
   // .skills__img
 
   &__img {
-    position: absolute;
-    left: 8%;
+    max-width: 100%;
+    display: none;
+    @media screen and (min-width: 1024px) {
+      display: inline-block;
+      margin-right: 60px;
+    }
   }
 
   // .skills__content
