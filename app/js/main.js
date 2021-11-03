@@ -70,8 +70,7 @@ $(function () {
     prevArrow: '<button type="button" class="blog-items__item-slider-prev blog-items__item-slider-arrow"><img src="images/svg/arrow-left.svg" alt="prev"></button>',
     nextArrow: '<button type="button" class="blog-items__item-slider-next blog-items__item-slider-arrow"><img src="images/svg/arrow-right.svg" alt="prev"></button>',
   });
-
-
+  
    // ================ FILTER FOR GALLERY ================ //
    var mixer = mixitup('.gallery__items');
 

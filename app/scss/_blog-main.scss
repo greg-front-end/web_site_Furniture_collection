@@ -109,6 +109,15 @@
   &__item-title {
     padding-bottom: 5px;
     @extend %responsive-text_size-blog_title;
+    color: $title-text-color;
+  }
+
+  // .blog-items__item-title--hover 
+
+  &__item-title--hover {
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   // .blog-items__item-text
@@ -353,6 +362,7 @@
   &__posts-item-info {
     color: $footer-form-placeholder;
     display: flex;
+    flex-wrap: wrap;
   }
 
   // .blog-aside__posts-item-date

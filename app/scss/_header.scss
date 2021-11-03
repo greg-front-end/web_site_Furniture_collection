@@ -71,6 +71,21 @@
 }
 
 // ================= RIGHTSIDE MENU ================= //
+.menu-rightside { margin-bottom: 15px; }
+
+@media screen and (max-width: 768px) {
+  .menu-rightside {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+
+    ul > li {
+      padding-right: 0;
+      padding-left: 10px;
+    }
+  }
+}
+
 .rightside-menu {
   padding: clamp(15px, calc(50 / 1140 * 100vw), 50px);
   position: fixed;
@@ -152,7 +167,7 @@
   // .rightside-menu__img
 
   &__img {
-    max-width: 485px;
+
   }
 }
 // active link
